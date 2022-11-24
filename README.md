@@ -40,7 +40,19 @@
    Usamos o nginx para fazermos esse balanceamento. Essa configuração se encontra no arquivo docker-compose.yml.
    
    
+   Documentação da API.
+   
+   A api foi documentada usando o SpringDoc que tem como base Swagger!
+   
+   Para acessar a documentação completa da api com o projeto rodando localmente. Acesse a seguinte url no seu navegador:
+   
+   http://localhost:8080/swagger-ui/index.html#/
+   
+   
+   
    Por fim é isso que precisamos para rodar o projeto!
+   
+   
    
    Para fazer o teste da aplicação pelo Postman, disponibilizei a collection das requisições que serão utilizadas para consumir a API.
    
