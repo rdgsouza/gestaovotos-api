@@ -7,7 +7,7 @@
    Para rodar o projeto por ex. pela IDE Intellij.
    Obs: Como precisamos trabalhar em 2 ambientes de desenvovimento que é o development e production pra isso criamos esses 2 profiles:
    
-   application-development.properties
+   application-development.properties e o
    application-production.properties
    
    Antes de rodar o projeto pela IDE é preciso passar qual o profile que será usado. Cada profile tem suas devidas configurações.
