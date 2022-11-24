@@ -79,6 +79,10 @@ não infrinja direitos de uso).
    http://localhost:8080/swagger-ui/index.html#/
    
    
+   Para acessar a documentação completa da api com o projeto rodando na nuvem. Acesse a seguinte url no seu navegador:
+   
+   http://20.195.202.49:80/swagger-ui/index.html#/
+   
    
    Para fazer o teste da aplicação pelo Postman, disponibilizei a collection das requisições que serão utilizadas para consumir a API.
    
