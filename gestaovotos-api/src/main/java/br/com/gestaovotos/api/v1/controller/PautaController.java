@@ -1,5 +1,6 @@
 package br.com.gestaovotos.api.v1.controller;
 
+import br.com.gestaovotos.api.v1.openapi.controller.PautaControllerOpenApi;
 import br.com.gestaovotos.domain.model.Pauta;
 import br.com.gestaovotos.domain.repository.PautaRepository;
 import br.com.gestaovotos.domain.service.PautaService;
@@ -21,7 +22,7 @@ import java.util.List;
 @Tag(name = "Pautas")
 @RestController
 @RequestMapping(path ="/v1/pautas", produces = MediaType.APPLICATION_JSON_VALUE)
-public class PautaController {
+public class PautaController implements PautaControllerOpenApi {
 
 	@Autowired
 	private PautaRepository pautaRepository;
@@ -35,6 +36,7 @@ public class PautaController {
 	@Autowired
 	private PautaModelAssembler pautaModelAssembler;
 
+	@Override
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public PautaModel adicionar(@RequestBody @Valid PautaInput pautaInput) {
@@ -51,6 +53,7 @@ public class PautaController {
 	}
 
 
+	@Override
 	@GetMapping
 	public Collection<PautaModel> listar() {
 
@@ -59,6 +62,7 @@ public class PautaController {
 		return pautaModelAssembler.toCollectionModel(todasPautas);
 	}
 
+	@Override
 	@GetMapping("/{pautaId}")
 	public PautaModel buscar(@PathVariable Long pautaId) {
 		Pauta pauta = pautaService.buscarOuFalhar(pautaId);
@@ -66,6 +70,7 @@ public class PautaController {
 		return pautaModelAssembler.toModel(pauta);
 	}
 
+	@Override
 	@DeleteMapping("/{pautaId}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void remover(@PathVariable Long pautaId) {

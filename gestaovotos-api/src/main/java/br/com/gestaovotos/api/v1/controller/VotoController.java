@@ -1,5 +1,6 @@
 package br.com.gestaovotos.api.v1.controller;
 
+import br.com.gestaovotos.api.v1.openapi.controller.VotoControllerOpenApi;
 import br.com.gestaovotos.domain.model.Voto;
 import br.com.gestaovotos.domain.service.VotoService;
 import br.com.gestaovotos.api.v1.ResourceUriHelper;
@@ -19,7 +20,7 @@ import java.util.Collection;
 @Tag(name = "Votos")
 @RestController
 @RequestMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-public class VotoController {
+public class VotoController implements VotoControllerOpenApi {
 
     @Autowired
     private VotoService votoService;
@@ -29,6 +30,7 @@ public class VotoController {
     private VotoModelAssembler votoModelAssembler;
 
 
+    @Override
     @PostMapping("v1/pautas/{pautaId}/sessoes/{sessaoId}/votos")
     @ResponseStatus(HttpStatus.CREATED)
     public VotoModel enviarVoto(@PathVariable Long pautaId, @PathVariable Long sessaoId,
@@ -45,6 +47,7 @@ public class VotoController {
         return votoModel;
     }
 
+    @Override
     @GetMapping("v1/pautas/{pautaId}/votos")
     @ResponseStatus(HttpStatus.OK)
     public Collection<VotoModel> listarVotosPorPautaId(@PathVariable Long pautaId) {
@@ -53,6 +56,7 @@ public class VotoController {
                 toCollectionModel(votoService.buscarVotosPorPautaId(pautaId));
     }
 
+    @Override
     @DeleteMapping("v1/votos/{votoId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void remover(@PathVariable Long votoId) {

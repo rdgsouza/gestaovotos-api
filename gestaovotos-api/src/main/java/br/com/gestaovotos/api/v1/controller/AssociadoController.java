@@ -1,6 +1,7 @@
 package br.com.gestaovotos.api.v1.controller;
 
 import br.com.gestaovotos.api.v1.model.input.AssociadoInput;
+import br.com.gestaovotos.api.v1.openapi.controller.AssociadoControllerOpenApi;
 import br.com.gestaovotos.domain.model.Associado;
 import br.com.gestaovotos.domain.repository.AssociadoRepository;
 import br.com.gestaovotos.domain.service.AssociadoService;
@@ -21,7 +22,7 @@ import java.util.List;
 @Tag(name = "Associados")
 @RestController
 @RequestMapping(path ="/v1/associados", produces = MediaType.APPLICATION_JSON_VALUE)
-public class AssociadoController {
+public class AssociadoController implements AssociadoControllerOpenApi {
 
 	@Autowired
 	private AssociadoRepository associdoRepository;
@@ -35,6 +36,7 @@ public class AssociadoController {
 	@Autowired
 	private AssociadoModelAssembler associadoModelAssembler;
 
+	@Override
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public AssociadoModel adicionar(@RequestBody @Valid AssociadoInput associadoInput) {
@@ -51,6 +53,7 @@ public class AssociadoController {
 	}
 
 
+	@Override
 	@GetMapping
 	public Collection<AssociadoModel> listar() {
 
@@ -59,6 +62,7 @@ public class AssociadoController {
 		return associadoModelAssembler.toCollectionModel(todosAssociados);
 	}
 
+	@Override
 	@GetMapping("/{associadoId}")
 	public AssociadoModel buscar(@PathVariable Long associadoId) {
 		Associado associado = associadoService.buscarOuFalhar(associadoId);
@@ -66,6 +70,7 @@ public class AssociadoController {
 		return associadoModelAssembler.toModel(associado);
 	}
 
+	@Override
 	@DeleteMapping("/{associadoId}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void remover(@PathVariable Long associadoId) {
