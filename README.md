@@ -46,6 +46,13 @@
    
    Faça o download do arquivo e importe para seu Postman: https://drive.google.com/file/d/13hP_yArVL9SuuIbcS3SVH1DOSJfL__Dy/view?usp=share_link
    
+   
+   
+   Requisitos:
+   JDK 11.0.17 ou superior - Apenas um JRE pode não ser suficiente, um JDK completo é recomendado.
+   Spring Boot 2.7.6
+   MySql 8
+   Docker version 20.10.21
 
 
    Objetivo do desafio: 
