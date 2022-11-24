@@ -25,6 +25,13 @@ não infrinja direitos de uso).
 
    ## Procedimento para rodar o projeto: 
    
+   Requisitos:  <br>
+   JDK 11.0.17 ou superior - Apenas um JRE pode não ser suficiente, um JDK completo é recomendado.  <br>
+   Spring Boot 2.7.6  <br>
+   MySql 8  <br>
+   Docker version 20.10.21  <br>
+
+   
    O projeto pode ser rodado tanto pelo Docker quanto pela IDE por ex. Intellij ou Spring Tool Suite.
    
    Para rodar o projeto por ex. pela IDE Intellij.
@@ -73,16 +80,12 @@ não infrinja direitos de uso).
    
    
    
-   Por fim é isso que precisamos para rodar o projeto!
-   
-   
-   
    Para fazer o teste da aplicação pelo Postman, disponibilizei a collection das requisições que serão utilizadas para consumir a API.
    
-   Obs: Para fazer o teste no Postman com a aplicação que disponibilizei na nuvem:
-   No momento que for fazer as requisições na aplicação no 'localhost' coloque o seguinte ip: 123.321.123 e troque a porta 8080 pela porta 80. 
+   Obs: Para fazer o teste no Postman com a aplicação que disponibilizei na nuvem rodando dentro de containers Docker:
+   No momento que for fazer as requisições na aplicação. No 'localhost' coloque o seguinte ip: 123.321.123 e troque a porta 8080 pela porta 80. 
  
-   Ficando assim: <br>
+   Ficando assim a URI para requisição: <br>
    
    Ex: localhost:8080/v1/pautas/1 <br>
       
@@ -91,11 +94,7 @@ não infrinja direitos de uso).
    
    Faça o download do arquivo e importe para seu Postman: https://drive.google.com/file/d/13hP_yArVL9SuuIbcS3SVH1DOSJfL__Dy/view?usp=share_link <br>
    
-    
    
-   Requisitos:  <br>
-   JDK 11.0.17 ou superior - Apenas um JRE pode não ser suficiente, um JDK completo é recomendado.  <br>
-   Spring Boot 2.7.6  <br>
-   MySql 8  <br>
-   Docker version 20.10.21  <br>
+
+   Por fim é isso que precisamos para rodar o projeto!
 
