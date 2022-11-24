@@ -1,4 +1,4 @@
-package br.com.gereciamentovotacao.api.exceptionhandler;
+package br.com.gestaovotos.api.exceptionhandler;
 import lombok.Getter;
 
 @Getter

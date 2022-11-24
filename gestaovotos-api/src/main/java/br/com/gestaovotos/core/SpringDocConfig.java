@@ -1,7 +1,6 @@
 package br.com.gestaovotos.core;
 
-import br.com.gereciamentovotacao.api.exceptionhandler.Problem;
-
+import br.com.gestaovotos.api.exceptionhandler.Problem;
 import io.swagger.v3.core.converter.ModelConverters;
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.ExternalDocumentation;
