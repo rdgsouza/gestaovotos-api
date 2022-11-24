@@ -5,7 +5,7 @@ import br.com.gestaovotos.domain.model.Voto;
 import br.com.gestaovotos.domain.repository.SessaoRepository;
 import br.com.gestaovotos.domain.repository.VotoRepository;
 import br.com.gestaovotos.exception.VotosNaoEncontradoPorPautaException;
-import br.com.gestaovotos.v1.dto.ResultadoDto;
+import br.com.gestaovotos.api.v1.dto.ResultadoDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

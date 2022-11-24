@@ -6,7 +6,7 @@ import br.com.gestaovotos.domain.model.Sessao;
 import br.com.gestaovotos.domain.model.Voto;
 import br.com.gestaovotos.domain.repository.VotoRepository;
 import br.com.gestaovotos.exception.*;
-import br.com.gestaovotos.v1.dto.StatusCpfDto;
+import br.com.gestaovotos.api.v1.dto.StatusCpfDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
