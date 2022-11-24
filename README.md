@@ -1,6 +1,29 @@
    Desafio Técnico
+   
+   Objetivo do desafio: 
 
-   Procedimento rodar projeto: 
+   No cooperativismo, cada associado possui um voto e as decisões são tomadas em assembleias, por votação.
+   A partir disso, você precisa criar uma solução back-end para gerenciar essas sessões de votação.
+   Essa solução deve ser executada na nuvem e promover as seguintes funcionalidades através de uma API REST:
+
+   1 - Cadastrar uma nova pauta;
+
+   2 - Abrir uma sessão de votação em uma pauta (a sessão de votação deve ficar aberta por um tempo
+determinado na chamada de abertura ou 1 minuto por default);
+
+   3 - Receber votos dos associados em pautas (os votos são apenas 'Sim'/'Não'. Cada associado é
+identificado por um id único e pode votar apenas uma vez por pauta);
+
+   4 - Contabilizar os votos e dar o resultado da votação na pauta
+
+   Para fins de exercício, a segurança das interfaces pode ser abstraída e qualquer chamada para as interfaces
+pode ser considerada como autorizada. A escolha da linguagem, frameworks e bibliotecas é livre (desde que
+não infrinja direitos de uso).
+
+   É importante que as pautas e os votos sejam persistidos e que não sejam perdidos com o restart da aplicação.
+   
+
+   ## Procedimento rodar projeto: 
    
    O projeto pode ser rodado tanto pelo Docker quanto pela IDE por ex. Intellij ou Spring Tool Suite.
    
@@ -56,9 +79,19 @@
    
    Para fazer o teste da aplicação pelo Postman, disponibilizei a collection das requisições que serão utilizadas para consumir a API.
    
-   Faça o download do arquivo e importe para seu Postman: https://drive.google.com/file/d/13hP_yArVL9SuuIbcS3SVH1DOSJfL__Dy/view?usp=share_link
+   Obs: Para fazer o teste no Postman com a aplicação que disponibilizei na nuvem:
+   No momento que for fazer as requisições na aplicação no 'localhost' coloque o seguinte ip: 123.321.123 e troque a porta 8080 pela porta 80. 
+ 
+   Ficando assim: <br>
+   
+   Ex: localhost:8080/v1/pautas/1 <br>
+      
+       123.321.123:80/v1/pautas/1 <br>
    
    
+   Faça o download do arquivo e importe para seu Postman: https://drive.google.com/file/d/13hP_yArVL9SuuIbcS3SVH1DOSJfL__Dy/view?usp=share_link <br>
+   
+    
    
    Requisitos:  <br>
    JDK 11.0.17 ou superior - Apenas um JRE pode não ser suficiente, um JDK completo é recomendado.  <br>
@@ -66,25 +99,3 @@
    MySql 8  <br>
    Docker version 20.10.21  <br>
 
-
-   Objetivo do desafio: 
-
-   No cooperativismo, cada associado possui um voto e as decisões são tomadas em assembleias, por votação.
-   A partir disso, você precisa criar uma solução back-end para gerenciar essas sessões de votação.
-   Essa solução deve ser executada na nuvem e promover as seguintes funcionalidades através de uma API REST:
-
-   1 - Cadastrar uma nova pauta;
-
-   2 - Abrir uma sessão de votação em uma pauta (a sessão de votação deve ficar aberta por um tempo
-determinado na chamada de abertura ou 1 minuto por default);
-
-   3 - Receber votos dos associados em pautas (os votos são apenas 'Sim'/'Não'. Cada associado é
-identificado por um id único e pode votar apenas uma vez por pauta);
-
-   4 - Contabilizar os votos e dar o resultado da votação na pauta
-
-   Para fins de exercício, a segurança das interfaces pode ser abstraída e qualquer chamada para as interfaces
-pode ser considerada como autorizada. A escolha da linguagem, frameworks e bibliotecas é livre (desde que
-não infrinja direitos de uso).
-
-   É importante que as pautas e os votos sejam persistidos e que não sejam perdidos com o restart da aplicação.

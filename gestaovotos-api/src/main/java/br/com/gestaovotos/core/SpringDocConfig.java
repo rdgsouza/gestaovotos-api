@@ -44,7 +44,7 @@ public class SpringDocConfig {
                         ))
                 .externalDocs(new ExternalDocumentation()
                         .description("Sobre a API de Gestão de Votos")
-                        .url(""))
+                        .url("https://github.com/rdgsouza/gestaovotos-api"))
                 .tags(Arrays.asList(
                         new Tag().name("Associados").description("Gerencia os associados "),
                         new Tag().name("Pautas").description("Gerencia as pautas"),
