@@ -48,11 +48,11 @@
    
    
    
-   Requisitos:
-   JDK 11.0.17 ou superior - Apenas um JRE pode não ser suficiente, um JDK completo é recomendado.
-   Spring Boot 2.7.6
-   MySql 8
-   Docker version 20.10.21
+   Requisitos:  <br>
+   JDK 11.0.17 ou superior - Apenas um JRE pode não ser suficiente, um JDK completo é recomendado.  <br>
+   Spring Boot 2.7.6  <br>
+   MySql 8  <br>
+   Docker version 20.10.21  <br>
 
 
    Objetivo do desafio: 
