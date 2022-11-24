@@ -1,0 +1,81 @@
+package br.com.gestaovotos.v1.controller;
+
+import br.com.gereciamentovotacao.api.ResourceUriHelper;
+import br.com.gereciamentovotacao.api.v1.assembler.AssociadoInputDisassembler;
+import br.com.gereciamentovotacao.api.v1.assembler.AssociadoModelAssembler;
+import br.com.gereciamentovotacao.api.v1.model.AssociadoModel;
+import br.com.gereciamentovotacao.api.v1.model.input.AssociadoInput;
+import br.com.gereciamentovotacao.api.v1.openapi.controller.AssociadoControllerOpenApi;
+import br.com.gereciamentovotacao.domain.model.Associado;
+import br.com.gereciamentovotacao.domain.repository.AssociadoRepository;
+import br.com.gereciamentovotacao.domain.service.AssociadoService;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import java.util.Collection;
+import java.util.List;
+
+@Tag(name = "Associados")
+@RestController
+@RequestMapping(path ="/v1/associados", produces = MediaType.APPLICATION_JSON_VALUE)
+public class AssociadoController implements AssociadoControllerOpenApi {
+
+	@Autowired
+	private AssociadoRepository associdoRepository;
+
+	@Autowired
+	private AssociadoService associadoService;
+
+	@Autowired
+	private AssociadoInputDisassembler associadoInputDisassembler;
+
+	@Autowired
+	private AssociadoModelAssembler associadoModelAssembler;
+
+	@Override
+	@PostMapping
+	@ResponseStatus(HttpStatus.CREATED)
+	public AssociadoModel adicionar(@RequestBody @Valid AssociadoInput associadoInput) {
+
+		Associado associadoAtual = associadoInputDisassembler
+				.toDomainObject(associadoInput);
+
+		AssociadoModel associadoModel = associadoModelAssembler.
+				toModel(associadoService.salvar(associadoAtual));
+
+		ResourceUriHelper.addUriInResponseHeader(associadoModel.getId());
+
+		return associadoModel;
+	}
+
+
+	@Override
+	@GetMapping
+	public Collection<AssociadoModel> listar() {
+
+		List<Associado> todosAssociados = associdoRepository.findAll();
+
+		return associadoModelAssembler.toCollectionModel(todosAssociados);
+	}
+
+	@Override
+	@GetMapping("/{associadoId}")
+	public AssociadoModel buscar(@PathVariable Long associadoId) {
+		Associado associado = associadoService.buscarOuFalhar(associadoId);
+
+		return associadoModelAssembler.toModel(associado);
+	}
+
+	@Override
+	@DeleteMapping("/{associadoId}")
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public void remover(@PathVariable Long associadoId) {
+
+		associadoService.excluir(associadoId);
+	}
+
+}
