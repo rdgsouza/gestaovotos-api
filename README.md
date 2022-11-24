@@ -83,13 +83,13 @@ não infrinja direitos de uso).
    Para fazer o teste da aplicação pelo Postman, disponibilizei a collection das requisições que serão utilizadas para consumir a API.
    
    Obs: Para fazer o teste no Postman com a aplicação que disponibilizei na nuvem rodando dentro de containers Docker:
-   No momento que for fazer as requisições na aplicação. No 'localhost' coloque o seguinte ip: 123.321.123 e troque a porta 8080 pela porta 80. 
+   No momento que for fazer as requisições na aplicação. No 'localhost' coloque o seguinte ip: 20.195.202.49 e troque a porta 8080 pela porta 80. 
  
    Ficando assim a URI para requisição: <br>
    
    Ex: localhost:8080/v1/pautas/1 <br>
       
-       123.321.123:80/v1/pautas/1 <br>
+       20.195.202.49:80/v1/pautas/1 <br>
    
    
    Faça o download do arquivo e importe para seu Postman: https://drive.google.com/file/d/13hP_yArVL9SuuIbcS3SVH1DOSJfL__Dy/view?usp=share_link <br>
