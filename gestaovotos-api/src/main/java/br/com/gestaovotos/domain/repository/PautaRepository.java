@@ -1,6 +1,6 @@
 package br.com.gestaovotos.domain.repository;
 
-import br.com.gereciamentovotacao.domain.model.Pauta;
+import br.com.gestaovotos.domain.model.Pauta;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

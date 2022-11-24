@@ -1,10 +1,10 @@
 package br.com.gestaovotos.domain.service;
 
-import br.com.gereciamentovotacao.domain.model.Associado;
-import br.com.gereciamentovotacao.domain.repository.AssociadoRepository;
-import br.com.gereciamentovotacao.exception.AssociadoNaoEncontradaException;
-import br.com.gereciamentovotacao.exception.CpfEmUsoException;
-import br.com.gereciamentovotacao.exception.EntidadeEmUsoException;
+import br.com.gestaovotos.domain.model.Associado;
+import br.com.gestaovotos.domain.repository.AssociadoRepository;
+import br.com.gestaovotos.exception.AssociadoNaoEncontradaException;
+import br.com.gestaovotos.exception.CpfEmUsoException;
+import br.com.gestaovotos.exception.EntidadeEmUsoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;

@@ -1,11 +1,11 @@
 package br.com.gestaovotos.domain.service;
 
-import br.com.gereciamentovotacao.api.v1.dto.ResultadoDto;
-import br.com.gereciamentovotacao.domain.model.Pauta;
-import br.com.gereciamentovotacao.domain.model.Voto;
-import br.com.gereciamentovotacao.domain.repository.SessaoRepository;
-import br.com.gereciamentovotacao.domain.repository.VotoRepository;
-import br.com.gereciamentovotacao.exception.VotosNaoEncontradoPorPautaException;
+import br.com.gestaovotos.domain.model.Pauta;
+import br.com.gestaovotos.domain.model.Voto;
+import br.com.gestaovotos.domain.repository.SessaoRepository;
+import br.com.gestaovotos.domain.repository.VotoRepository;
+import br.com.gestaovotos.exception.VotosNaoEncontradoPorPautaException;
+import br.com.gestaovotos.v1.dto.ResultadoDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

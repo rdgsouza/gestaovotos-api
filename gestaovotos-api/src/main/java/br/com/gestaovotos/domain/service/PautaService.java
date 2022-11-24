@@ -1,9 +1,9 @@
 package br.com.gestaovotos.domain.service;
 
-import br.com.gereciamentovotacao.domain.model.Pauta;
-import br.com.gereciamentovotacao.domain.repository.PautaRepository;
-import br.com.gereciamentovotacao.exception.EntidadeEmUsoException;
-import br.com.gereciamentovotacao.exception.PautaNaoEncontradaException;
+import br.com.gestaovotos.domain.model.Pauta;
+import br.com.gestaovotos.domain.repository.PautaRepository;
+import br.com.gestaovotos.exception.EntidadeEmUsoException;
+import br.com.gestaovotos.exception.PautaNaoEncontradaException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;

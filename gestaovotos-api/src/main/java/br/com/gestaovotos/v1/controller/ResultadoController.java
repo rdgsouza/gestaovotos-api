@@ -1,8 +1,7 @@
 package br.com.gestaovotos.v1.controller;
 
-import br.com.gereciamentovotacao.api.v1.dto.ResultadoDto;
-import br.com.gereciamentovotacao.api.v1.openapi.controller.ResultadoControllerOpenApi;
-import br.com.gereciamentovotacao.domain.service.ResultadoService;
+import br.com.gestaovotos.domain.service.ResultadoService;
+import br.com.gestaovotos.v1.dto.ResultadoDto;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,12 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Tag(name = "Resultados")
 @RestController
-public class ResultadoController implements ResultadoControllerOpenApi {
+public class ResultadoController {
 
     @Autowired
     private ResultadoService resultadoService;
 
-    @Override
     @GetMapping("v1/pautas/{pautaId}/resultado")
     @ResponseStatus(code = HttpStatus.OK)
     public ResultadoDto findVotosByPautaId(@PathVariable Long pautaId) {

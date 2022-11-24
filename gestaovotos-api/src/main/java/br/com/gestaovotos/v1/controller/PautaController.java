@@ -1,14 +1,13 @@
 package br.com.gestaovotos.v1.controller;
 
-import br.com.gereciamentovotacao.api.ResourceUriHelper;
-import br.com.gereciamentovotacao.api.v1.assembler.PautaInputDisassembler;
-import br.com.gereciamentovotacao.api.v1.assembler.PautaModelAssembler;
-import br.com.gereciamentovotacao.api.v1.model.PautaModel;
-import br.com.gereciamentovotacao.api.v1.model.input.PautaInput;
-import br.com.gereciamentovotacao.api.v1.openapi.controller.PautaControllerOpenApi;
-import br.com.gereciamentovotacao.domain.model.Pauta;
-import br.com.gereciamentovotacao.domain.repository.PautaRepository;
-import br.com.gereciamentovotacao.domain.service.PautaService;
+import br.com.gestaovotos.domain.model.Pauta;
+import br.com.gestaovotos.domain.repository.PautaRepository;
+import br.com.gestaovotos.domain.service.PautaService;
+import br.com.gestaovotos.v1.ResourceUriHelper;
+import br.com.gestaovotos.v1.assembler.PautaInputDisassembler;
+import br.com.gestaovotos.v1.assembler.PautaModelAssembler;
+import br.com.gestaovotos.v1.model.PautaModel;
+import br.com.gestaovotos.v1.model.input.PautaInput;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -22,7 +21,7 @@ import java.util.List;
 @Tag(name = "Pautas")
 @RestController
 @RequestMapping(path ="/v1/pautas", produces = MediaType.APPLICATION_JSON_VALUE)
-public class PautaController implements PautaControllerOpenApi {
+public class PautaController {
 
 	@Autowired
 	private PautaRepository pautaRepository;
@@ -36,7 +35,6 @@ public class PautaController implements PautaControllerOpenApi {
 	@Autowired
 	private PautaModelAssembler pautaModelAssembler;
 
-	@Override
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public PautaModel adicionar(@RequestBody @Valid PautaInput pautaInput) {
@@ -53,7 +51,6 @@ public class PautaController implements PautaControllerOpenApi {
 	}
 
 
-	@Override
 	@GetMapping
 	public Collection<PautaModel> listar() {
 
@@ -62,7 +59,6 @@ public class PautaController implements PautaControllerOpenApi {
 		return pautaModelAssembler.toCollectionModel(todasPautas);
 	}
 
-	@Override
 	@GetMapping("/{pautaId}")
 	public PautaModel buscar(@PathVariable Long pautaId) {
 		Pauta pauta = pautaService.buscarOuFalhar(pautaId);
@@ -70,7 +66,6 @@ public class PautaController implements PautaControllerOpenApi {
 		return pautaModelAssembler.toModel(pauta);
 	}
 
-	@Override
 	@DeleteMapping("/{pautaId}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void remover(@PathVariable Long pautaId) {

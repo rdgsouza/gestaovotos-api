@@ -1,12 +1,12 @@
 package br.com.gestaovotos.domain.service;
 
-import br.com.gereciamentovotacao.api.v1.dto.statusCpfDto;
-import br.com.gereciamentovotacao.domain.model.Associado;
-import br.com.gereciamentovotacao.domain.model.Pauta;
-import br.com.gereciamentovotacao.domain.model.Sessao;
-import br.com.gereciamentovotacao.domain.model.Voto;
-import br.com.gereciamentovotacao.domain.repository.VotoRepository;
-import br.com.gereciamentovotacao.exception.*;
+import br.com.gestaovotos.domain.model.Associado;
+import br.com.gestaovotos.domain.model.Pauta;
+import br.com.gestaovotos.domain.model.Sessao;
+import br.com.gestaovotos.domain.model.Voto;
+import br.com.gestaovotos.domain.repository.VotoRepository;
+import br.com.gestaovotos.exception.*;
+import br.com.gestaovotos.v1.dto.StatusCpfDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.dao.DataIntegrityViolationException;
@@ -130,7 +130,7 @@ public class VotoService {
     private void validarCpf(Voto voto) {
 
         try {
-        ResponseEntity<statusCpfDto> cpfValidacao = consultarCpf(voto);
+        ResponseEntity<StatusCpfDto> cpfValidacao = consultarCpf(voto);
         if (HttpStatus.OK.equals(cpfValidacao.getStatusCode())) {
             if (UNABLE_TO_VOTE.equalsIgnoreCase(cpfValidacao.getBody().getStatus())) {
                 throw new VotoNegadoException(String.format(MSG_VOTO_NEGADO, voto.getCpf()));
@@ -151,12 +151,12 @@ public class VotoService {
         }
     }
 
-    private ResponseEntity<statusCpfDto> consultarCpf(Voto voto) {
+    private ResponseEntity<StatusCpfDto> consultarCpf(Voto voto) {
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
         HttpEntity<String> entity = new HttpEntity<>(headers);
         return restTemplate.exchange(urlValidacaoCpf.concat("/").concat(voto.getCpf()), HttpMethod.GET, entity,
-                statusCpfDto.class);
+                StatusCpfDto.class);
     }
 
 }

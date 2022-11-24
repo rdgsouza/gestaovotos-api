@@ -1,6 +1,6 @@
 package br.com.gestaovotos.domain.repository;
 
-import br.com.gereciamentovotacao.domain.model.Associado;
+import br.com.gestaovotos.domain.model.Associado;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

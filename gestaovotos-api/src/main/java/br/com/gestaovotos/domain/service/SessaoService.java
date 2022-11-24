@@ -1,10 +1,10 @@
 package br.com.gestaovotos.domain.service;
 
-import br.com.gereciamentovotacao.domain.model.Sessao;
-import br.com.gereciamentovotacao.domain.repository.SessaoRepository;
-import br.com.gereciamentovotacao.exception.EntidadeEmUsoException;
-import br.com.gereciamentovotacao.exception.SessaoInvalidaException;
-import br.com.gereciamentovotacao.exception.SessaoNaoEncontradaException;
+import br.com.gestaovotos.domain.model.Sessao;
+import br.com.gestaovotos.domain.repository.SessaoRepository;
+import br.com.gestaovotos.exception.EntidadeEmUsoException;
+import br.com.gestaovotos.exception.SessaoInvalidaException;
+import br.com.gestaovotos.exception.SessaoNaoEncontradaException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
