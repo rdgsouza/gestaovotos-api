@@ -23,7 +23,7 @@ não infrinja direitos de uso).
    É importante que as pautas e os votos sejam persistidos e que não sejam perdidos com o restart da aplicação.
    
 
-   ## Procedimento para rodar projeto: 
+   ## Procedimento para rodar o projeto: 
    
    O projeto pode ser rodado tanto pelo Docker quanto pela IDE por ex. Intellij ou Spring Tool Suite.
    
