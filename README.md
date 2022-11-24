@@ -89,7 +89,7 @@ não infrinja direitos de uso).
    
    Ex: localhost:8080/v1/pautas/1 <br>
       
-       20.195.202.49:80/v1/pautas/1 <br>
+       20.195.202.49:80/v1/pautas/1
    
    
    Faça o download do arquivo e importe para seu Postman: https://drive.google.com/file/d/13hP_yArVL9SuuIbcS3SVH1DOSJfL__Dy/view?usp=share_link <br>
