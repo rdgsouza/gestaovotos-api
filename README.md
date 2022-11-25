@@ -70,11 +70,11 @@ não infrinja direitos de uso).
     
    Obs: O projeto quando rodado com o Docker levanta dois containers da mesma aplicação. Com isso implementei o balanceamento de carga para melhorar a performance da aplicação. 
    Usei o nginx para gerenciar esse balanceamento de carga. Essa configuração se encontra no arquivo docker-compose.yml. 
-   Configurei o nginx para receber as requisões pela porta 80 ou seja caso teste o projeto localmente pelo Docker, utilize a uri dessa forma Ex:
+   Configurei o nginx para receber as requisões pela porta 80 ou seja caso queira testar o projeto localmente pelo Docker, utilize a uri dessa forma Ex:
    <h4> localhost:80/v1/pautas/1 </h4>
    <br>
 
-   Caso teste o projeto em produção que estar rodando no Docker, utilize a uri dessa forma. Ex:
+   Caso queira testar o projeto em produção que estar rodando no Docker, utilize a uri dessa forma. Ex:
    <h4> 20.195.202.49:80/v1/pautas/1 </h4>
    
    Sobre a documentação da API
