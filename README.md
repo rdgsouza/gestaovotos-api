@@ -78,8 +78,8 @@ não infrinja direitos de uso).
    <h4> 20.195.202.49:80/v1/pautas/1 </h4>
    
    <br>
-   Sobre a documentação da API
-   
+   #Sobre a documentação da API
+   <br>
    A api foi documentada usando o SpringDoc que tem como base Swagger!
    
    Para acessar a documentação completa da api, rode o projeto localmente pela IDE. Em seguida acesse a seguinte url no seu navegador:
