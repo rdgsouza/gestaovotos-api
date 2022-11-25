@@ -23,7 +23,7 @@ não infrinja direitos de uso).
    É importante que as pautas e os votos sejam persistidos e que não sejam perdidos com o restart da aplicação.
    
 
-   ## Procedimento para rodar o projeto: 
+   # Procedimento para rodar o projeto: 
    
    Requisitos:  <br>
    JDK 11.0.17 ou superior - Apenas um JRE pode não ser suficiente, um JDK completo é recomendado.  <br>
@@ -46,7 +46,7 @@ não infrinja direitos de uso).
    
     Após escolher o profile é só clicar no ícone que executa o projeto e pronto!
     
-    Obs: Quando executado o projeto pelo profile development. Temos um arquivos chamado afterMigrate.sql que insere no banco de dados algumas infomações apenas pra fins de testes mais quando usado o profile production não usamos o arquivo afterMigrate.sql. Mantendo assim o banco de dados de produção sempre consistente.
+    Obs: Quando executado o projeto pelo profile development. Temos um arquivos chamado afterMigrate.sql que insere no banco de dados algumas infomações apenas pra fins de testes mais quando usado o profile production não é usado o arquivo afterMigrate.sql. Mantendo assim o banco de dados de produção sempre consistente.
     
     
     Para rodar o projeto pelo Docker. Vá até a pasta do projeto onde se encontra os arquivos Dockerfile e docker-compose.yml e e digite o seguinte comando:
@@ -67,7 +67,7 @@ não infrinja direitos de uso).
     A outra variável chamada 'MYSQL_ROOT_PASSWORD' nela passamos a senha que defimos para o mysql. A nossa aplicação faz a conexão com o banco de dados. Precisamos dessa informação para fazer a conexão. Essa variável de ambiente esta definina nos dois arquivos de profile que é o application-development.properties e o application-production.properties.
     
    Obs: O projeto quando rodado com o Docker levanta dois containers da mesma aplicação. Com isso implementei o balanceamento de carga para melhorar a perfomace da aplicação. 
-   Usamos o nginx para gerenciar esse balanceamento. Essa configuração se encontra no arquivo docker-compose.yml.
+   Usei o nginx para gerenciar esse balanceamento. Essa configuração se encontra no arquivo docker-compose.yml.
    
    
    Documentação da API.
