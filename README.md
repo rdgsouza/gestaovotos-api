@@ -74,7 +74,7 @@ não infrinja direitos de uso).
    <h4> localhost:80/v1/pautas/1 </h4>
    <br>
 
-   Caso queira testar o projeto em produção que estar rodando no Docker, utilize a uri dessa forma. Ex:
+   Caso queira testar o projeto que estar rodando no Docker na nuvem, utilize a uri dessa forma. Ex:
    <h4> 20.195.202.49:80/v1/pautas/1 </h4>
    
    Sobre a documentação da API
