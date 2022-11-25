@@ -42,11 +42,12 @@ não infrinja direitos de uso).
    
    Antes de rodar o projeto pela IDE é preciso passar qual o profile que será usado. Cada profile tem suas devidas configurações.
    
-   Para escolher o profile por ex. pela IDE Intellij. Vá até no menu - Run - Profile - Edit Configurations.. No campo 'Active profiles' digite 'development' caso queira usar o profile de desenvolvimento. Caso queira usar o profile de produção digite 'production'
+   Para escolher o profile por ex. pela IDE Intellij. Vá até no menu - Run - Profile - Edit Configurations.. No campo 'Active profiles' digite 'development' caso queira usar o profile de desenvolvimento. 
+   Caso queira usar o profile de produção digite 'production'
    
-    Após escolher o profile é só clicar no ícone que executa o projeto e pronto!
+   Após escolher o profile é só clicar no ícone que executa o projeto e pronto!
     
-    Obs: Quando executado o projeto pelo profile development. Temos um arquivos chamado afterMigrate.sql que insere no banco de dados algumas infomações apenas pra fins de testes mais quando usado o profile production não é usado o arquivo afterMigrate.sql. Mantendo assim o banco de dados de produção sempre consistente.
+    Obs: Quando executado o projeto pelo profile development. Temos um arquivo chamado afterMigrate.sql que insere no banco de dados algumas infomações apenas pra fins de testes mais quando usado o profile production não é usado o arquivo afterMigrate.sql, mantendo assim o banco de dados de produção sempre consistente.
     
     
     Para rodar o projeto pelo Docker. Vá até a pasta do projeto onde se encontra os arquivos Dockerfile e docker-compose.yml e e digite o seguinte comando:
@@ -66,11 +67,12 @@ não infrinja direitos de uso).
     A outra variável chamada 'JDBC_DATABASE_PASSWORD' nela você define qual a senha para seu banco de dados que sera levantado no Docker
     A outra variável chamada 'MYSQL_ROOT_PASSWORD' nela passamos a senha que defimos para o mysql. A nossa aplicação faz a conexão com o banco de dados. Precisamos dessa informação para fazer a conexão. Essa variável de ambiente esta definina nos dois arquivos de profile que é o application-development.properties e o application-production.properties.
     
-   Obs: O projeto quando rodado com o Docker levanta dois containers da mesma aplicação. Com isso implementei o balanceamento de carga para melhorar a perfomace da aplicação. 
-   Usei o nginx para gerenciar esse balanceamento. Essa configuração se encontra no arquivo docker-compose.yml.
+   Obs: O projeto quando rodado com o Docker levanta dois containers da mesma aplicação. Com isso implementei o balanceamento de carga para melhorar a performance da aplicação. 
+   Usei o nginx para gerenciar esse balanceamento. 
+   Essa configuração se encontra no arquivo docker-compose.yml.
    
    
-   Documentação da API.
+   Sobre a documentação da API
    
    A api foi documentada usando o SpringDoc que tem como base Swagger!
    
