@@ -82,7 +82,7 @@ não infrinja direitos de uso).
    
    A api foi documentada usando o SpringDoc que tem como base Swagger!
    
-   Para acessar a documentação completa da api, rode o projeto pela IDE. Em seguida acesse a seguinte url no seu navegador:
+   Para acessar a documentação completa da api, rode o projeto localmente pela IDE. Em seguida acesse a seguinte url no seu navegador:
    
    http://localhost:8080/swagger-ui/index.html#/
    
