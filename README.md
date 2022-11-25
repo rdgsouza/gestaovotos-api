@@ -81,6 +81,8 @@ não infrinja direitos de uso).
    
    <h4> 20.195.202.49:80/v1/pautas/1 </h4>
    
+   Obs: Lembrando que inicialmente o banco de dados está sem dados para fazer testes. É preciso fazer um POST usando uma das URIs da aplicação.
+   
    <br>
    Sobre a documentação da API
    <br><br>
