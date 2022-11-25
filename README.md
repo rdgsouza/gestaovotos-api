@@ -97,4 +97,4 @@ não infrinja direitos de uso).
    https://drive.google.com/file/d/1cWifp3Ym9nZ5A_tL5dVrYtvUBxfRuoHm/view?usp=share_link
    
  
-   Por fim é isso que precisamos para rodar o projeto!
+   Então é isso que precisamos para rodar o projeto!
