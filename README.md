@@ -90,13 +90,10 @@ não infrinja direitos de uso).
    Obs: Para fazer o teste no Postman com a aplicação que disponibilizei na nuvem rodando dentro de containers Docker
    no momento que for fazer as requisições na aplicação. No 'localhost' coloque o seguinte ip: 20.195.202.49 e troque a porta 8080 pela porta 80. 
  
-   Ficando assim a URI para requisição: <br>
-   
    Ex: localhost:8080/v1/pautas/1 <br>
       
    Ficando assim:
    20.195.202.49:80/v1/pautas/1
-   
    
    Faça o download do arquivo de collection das requisiçoões e importe para seu Postman: https://drive.google.com/file/d/13hP_yArVL9SuuIbcS3SVH1DOSJfL__Dy/view?usp=share_link <br>
    
