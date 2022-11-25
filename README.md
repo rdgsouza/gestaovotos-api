@@ -79,7 +79,7 @@ não infrinja direitos de uso).
    
    <br>
    Sobre a documentação da API
-   <br>
+   <br><br>
    A api foi documentada usando o SpringDoc que tem como base Swagger!
    
    Para acessar a documentação completa da api, rode o projeto localmente pela IDE. Em seguida acesse a seguinte url no seu navegador:
