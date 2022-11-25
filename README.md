@@ -69,9 +69,13 @@ não infrinja direitos de uso).
     A outra variável chamada 'MYSQL_ROOT_PASSWORD' nela passamos a senha que defimos para o mysql. A nossa aplicação faz a conexão com o banco de dados. Precisamos dessa informação para fazer a conexão. Essa variável de ambiente esta definina nos dois arquivos de profile que é o application-development.properties e o application-production.properties.
     
    Obs: O projeto quando rodado com o Docker levanta dois containers da mesma aplicação. Com isso implementei o balanceamento de carga para melhorar a performance da aplicação. 
-   Usei o nginx para gerenciar esse balanceamento de caraga. 
-   Essa configuração se encontra no arquivo docker-compose.yml.
-   
+   Usei o nginx para gerenciar esse balanceamento de carga. Essa configuração se encontra no arquivo docker-compose.yml. 
+   Configurei o nginx para receber as requisões pela porta 80 ou seja caso teste o projeto pelo Docker, utilize a uri dessa forma:  <br>
+   localhost:80/v1/pautas/1 <br>
+
+   Caso teste o projeto em produção que estar rodando no Docker, utilize a uri dessa forma: <br>
+   20.195.202.49:80/v1/pautas/1 <br>
+
    
    Sobre a documentação da API
    
@@ -83,14 +87,6 @@ não infrinja direitos de uso).
    
    
    Para fazer o teste da aplicação pelo Postman, disponibilizei a collection das requisições que serão utilizadas para consumir a API.
-   
-   Obs: Para fazer o teste no Postman com a aplicação que disponibilizei na nuvem rodando dentro de containers Docker
-   no momento que for fazer as requisições na aplicação. Na parte da uri que esta escrito 'localhost' coloque o seguinte ip: 20.195.202.49 e troque a porta 8080 pela porta 80. 
- 
-   Ex: localhost:8080/v1/pautas/1 <br>
-      
-   Ficando assim:
-   20.195.202.49:80/v1/pautas/1
    
    Faça o download do arquivo de collection das requisiçoões e importe para seu Postman: https://drive.google.com/file/d/13hP_yArVL9SuuIbcS3SVH1DOSJfL__Dy/view?usp=share_link <br>
    
