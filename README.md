@@ -62,7 +62,7 @@ não infrinja direitos de uso).
     MYSQL_ROOT_PASSWORD=1040651820 DB_HOST=gestaovotos-mysql SPRING_PROFILES_ACTIVE=development JDBC_DATABASE_USERNAME=root JDBC_DATABASE_PASSWORD=1040651820 docker-compose up
     
     Obs: Observe que existem variáveis de ambiente.
-     A outra variável chamada 'MYSQL_ROOT_PASSWORD' nela passamos a senha que defimos para o mysql. A nossa aplicação faz a conexão com o banco de dados. Precisamos dessa informação para fazer a conexão. Essa variável de ambiente esta definina nos dois arquivos de profile que é o application-development.properties e o application-production.properties.
+    A outra variável chamada 'MYSQL_ROOT_PASSWORD' nela passamos a senha que defimos para o mysql. A nossa aplicação faz a conexão com o banco de dados. Precisamos dessa informação para fazer a conexão. Essa variável de ambiente esta definina nos dois arquivos de profile que é o application-development.properties e o application-production.properties.
     A variável 'DB_HOST' vai receber o host do mysql. Esse host se encontra expecificado no docker-compose.yml. A variável recebe o que foi definido lá e o própio Docker vai resolver o host de conexão com o mysql.
     A outra variável chamada 'SPRING_PROFILES_ACTIVE' é o profile do Spring no qual vai rodar o projeto de acordo com o que for passado tendo em vista que existem dois profiles:
     development e production.
