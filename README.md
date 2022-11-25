@@ -84,7 +84,7 @@ não infrinja direitos de uso).
    Obs: Lembrando que inicialmente o banco de dados está sem dados para fazer testes. É preciso fazer um POST usando uma das URIs da aplicação.
    
    <br>
-   Sobre a documentação da API
+   Sobre a documentação da API:
    <br><br>
    A api foi documentada usando o SpringDoc que tem como base Swagger!
    
