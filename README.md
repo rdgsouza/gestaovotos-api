@@ -46,11 +46,10 @@ não infrinja direitos de uso).
    Caso queira usar o profile de produção digite 'production'
    
    Após escolher o profile é só clicar no ícone que executa o projeto e pronto!
+   Obs: Quando executado o projeto pelo profile development. Temos um arquivo chamado afterMigrate.sql que insere no banco de dados algumas infomações apenas pra fins de testes mais quando usado o profile production não é usado o arquivo afterMigrate.sql, mantendo assim o banco de dados de produção sempre consistente.
     
-    Obs: Quando executado o projeto pelo profile development. Temos um arquivo chamado afterMigrate.sql que insere no banco de dados algumas infomações apenas pra fins de testes mais quando usado o profile production não é usado o arquivo afterMigrate.sql, mantendo assim o banco de dados de produção sempre consistente.
     
-    
-    Para rodar o projeto pelo Docker. Vá até a pasta do projeto onde se encontra os arquivos Dockerfile e docker-compose.yml e e digite o seguinte comando:
+   Para rodar o projeto pelo Docker. Vá até a pasta do projeto onde se encontra os arquivos Dockerfile e docker-compose.yml e e digite o seguinte comando:
     
     ./mvnw package -Dmaven.test.skip=true -Pdocker
 
