@@ -32,17 +32,19 @@ não infrinja direitos de uso).
    Docker version 20.10.21  <br>
 
    
-   O projeto pode ser rodado tanto pelo Docker quanto pela IDE por ex. Intellij ou Spring Tool Suite.
+   O projeto pode ser rodado tanto pelo Docker quanto por uma IDE por ex: Intellij ou Spring Tool Suite.
    
    Para rodar o projeto por ex. pela IDE Intellij. <br>
-   Obs: Como precisamos trabalhar em 2 ambientes de desenvolvimento que é o development e production pra isso criamos esses 2 profiles:
+   Precisamos especificar um profile para o Spring. 
+   Como precisamos trabalhar em dois ambientes que são eles o de desenvolvimento que é o profile development e de produção que é o profile production.    Pra isso criamos dois arquivos de profile:
    
    application-development.properties e o
    application-production.properties
    
    Antes de rodar o projeto pela IDE é preciso passar qual o profile que será usado. Cada profile tem suas devidas configurações.
    
-   Para escolher o profile por ex. pela IDE Intellij. Vá até no menu - Run - Profile - Edit Configurations.. No campo 'Active profiles' digite 'development' caso queira usar o profile de desenvolvimento. 
+   Para escolher o profile por ex. pela IDE Intellij. 
+   Vá até no menu - Run - Profile - Edit Configurations.. No campo 'Active profiles' digite 'development' caso queira usar o profile de desenvolvimento. 
    Caso queira usar o profile de produção digite 'production'
    
    Após escolher o profile é só clicar no ícone que executa o projeto e pronto!
@@ -67,7 +69,7 @@ não infrinja direitos de uso).
     A outra variável chamada 'MYSQL_ROOT_PASSWORD' nela passamos a senha que defimos para o mysql. A nossa aplicação faz a conexão com o banco de dados. Precisamos dessa informação para fazer a conexão. Essa variável de ambiente esta definina nos dois arquivos de profile que é o application-development.properties e o application-production.properties.
     
    Obs: O projeto quando rodado com o Docker levanta dois containers da mesma aplicação. Com isso implementei o balanceamento de carga para melhorar a performance da aplicação. 
-   Usei o nginx para gerenciar esse balanceamento. 
+   Usei o nginx para gerenciar esse balanceamento de caraga. 
    Essa configuração se encontra no arquivo docker-compose.yml.
    
    
@@ -83,7 +85,7 @@ não infrinja direitos de uso).
    Para fazer o teste da aplicação pelo Postman, disponibilizei a collection das requisições que serão utilizadas para consumir a API.
    
    Obs: Para fazer o teste no Postman com a aplicação que disponibilizei na nuvem rodando dentro de containers Docker
-   no momento que for fazer as requisições na aplicação. No 'localhost' coloque o seguinte ip: 20.195.202.49 e troque a porta 8080 pela porta 80. 
+   no momento que for fazer as requisições na aplicação. Na parte da uri que esta escrito 'localhost' coloque o seguinte ip: 20.195.202.49 e troque a porta 8080 pela porta 80. 
  
    Ex: localhost:8080/v1/pautas/1 <br>
       
