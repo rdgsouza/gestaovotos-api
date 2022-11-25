@@ -76,7 +76,9 @@ não infrinja direitos de uso).
    <h4> localhost:80/v1/pautas/1 </h4>
    <br>
 
-   Caso queira testar o projeto que estar rodando no Docker na nuvem, utilize a URI dessa forma. Ex:
+   Caso queira testar o projeto que estar rodando no Docker na nuvem, utilize a URI dessa forma. Ex: Para fazer um GET de pautas por ID:
+   O Ip address da aplição na nuvem: 20.195.202.49
+   
    <h4> 20.195.202.49:80/v1/pautas/1 </h4>
    
    <br>
