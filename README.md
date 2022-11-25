@@ -42,7 +42,7 @@ não infrinja direitos de uso).
    
    Antes de rodar o projeto pela IDE é preciso passar qual o profile que será usado. Cada profile tem suas devidas configurações.
    
-   Para escolher o profile por ex. pela IDE Intellij. Vá até no menu - Run - Profile - Edit Configurations.. Na campo 'Active profiles' digite 'development' caso queira usar o profile de desenvovimento. Caso queira usar o profile de produção digite 'production'
+   Para escolher o profile por ex. pela IDE Intellij. Vá até no menu - Run - Profile - Edit Configurations.. No campo 'Active profiles' digite 'development' caso queira usar o profile de desenvovimento. Caso queira usar o profile de produção digite 'production'
    
     Após escolher o profile é só clicar no ícone que executa o projeto e pronto!
     
