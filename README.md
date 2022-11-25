@@ -55,7 +55,7 @@ não infrinja direitos de uso).
     
     ./mvnw package -Dmaven.test.skip=true -Pdocker
 
-    Esse comando faz o empacotamento do projeto e ao mesmo tempo gera a imagem da nossa aplicação.
+    Esse comando faz o empacotamento do projeto e ao mesmo tempo gera a imagem da aplicação.
     
     Em seguida digite o seguinte comando:
     
