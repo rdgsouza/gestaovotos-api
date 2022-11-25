@@ -88,7 +88,8 @@ não infrinja direitos de uso).
    
    Para fazer o teste da aplicação pelo Postman, disponibilizei a collection das requisições que serão utilizadas para consumir a API.
    
-   Faça o download do arquivo de collection das requisiçoões e importe para seu Postman: https://drive.google.com/file/d/13hP_yArVL9SuuIbcS3SVH1DOSJfL__Dy/view?usp=share_link <br>
+   Faça o download do arquivo de collection das requisiçoões e importe para seu Postman: <br>
+   https://drive.google.com/file/d/1cWifp3Ym9nZ5A_tL5dVrYtvUBxfRuoHm/view?usp=share_link
    
  
    Por fim é isso que precisamos para rodar o projeto!
