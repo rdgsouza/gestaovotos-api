@@ -34,7 +34,7 @@ não infrinja direitos de uso).
    
    O projeto pode ser rodado tanto pelo Docker quanto pela IDE por ex. Intellij ou Spring Tool Suite.
    
-   Para rodar o projeto por ex. pela IDE Intellij.
+   Para rodar o projeto por ex. pela IDE Intellij. <br>
    Obs: Como precisamos trabalhar em 2 ambientes de desenvolvimento que é o development e production pra isso criamos esses 2 profiles:
    
    application-development.properties e o
