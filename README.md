@@ -91,12 +91,9 @@ não infrinja direitos de uso).
    Para acessar a documentação completa da api, rode o projeto localmente pela IDE. Em seguida acesse a seguinte url no seu navegador:
    
    http://localhost:8080/swagger-ui/index.html#/
-   
+    
    
    Para fazer o teste da aplicação pelo Postman, disponibilizei a collection das requisições que serão utilizadas para consumir a API.
    
    Faça o download do arquivo de collection das requisiçoões e importe para seu Postman: <br>
    https://drive.google.com/file/d/1cWifp3Ym9nZ5A_tL5dVrYtvUBxfRuoHm/view?usp=share_link
-   
- 
-   Então é isso que precisamos para rodar o projeto!
