@@ -76,7 +76,7 @@ não infrinja direitos de uso).
    <h4> localhost:80/v1/pautas/1 </h4>
    <br>
 
-   Caso queira testar o projeto que estar rodando no Docker na nuvem, utilize a URI dessa forma. Ex: Faça uma requisição usando o método http GET de pautas por ID dessa fomra: <br>
+   Caso queira testar o projeto que estar rodando no Docker na nuvem, utilize a URI dessa forma. Ex: Faça uma requisição usando o método http GET de pautas por ID dessa forma: <br>
    Adicione IP address da aplição na nuvem: 20.195.202.49 seguido da porta 80 do balanceador de carga nginx ficando assim:
    
    <h4> 20.195.202.49:80/v1/pautas/1 </h4>
