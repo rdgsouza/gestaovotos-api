@@ -38,8 +38,8 @@ public class AssociadoService {
 	@Transactional
 	public Associado salvar(Associado associado) {
 
+		    verificaCpfExistente(associado);
 			validarCpf(associado);
-			verificaCpfExistente(associado);
 
 			return associadoRepository.save(associado);
 	}
