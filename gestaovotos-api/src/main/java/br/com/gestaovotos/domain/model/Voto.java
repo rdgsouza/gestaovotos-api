@@ -24,6 +24,6 @@ public class Voto {
     @ManyToOne(fetch = FetchType.EAGER)
     private Pauta pauta;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     private Associado associado;
 }

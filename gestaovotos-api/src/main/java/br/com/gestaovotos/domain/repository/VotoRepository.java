@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import javax.persistence.OrderBy;
 import java.util.List;
 import java.util.Optional;
 
@@ -15,8 +16,10 @@ public interface VotoRepository extends JpaRepository<Voto, Long> {
     @Query("from Voto v join fetch v.pauta join fetch v.associado")
     List<Voto> findAll();
 
+    @OrderBy("id ASC")
     @Query("from Voto v join fetch v.pauta join fetch v.associado")
     Optional<List<Voto>> findByPautaId(Long id);
+
     Optional<Voto> findByCpfAndPautaId(String cpf, Long id);
 
 }
