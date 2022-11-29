@@ -21,9 +21,11 @@ public class Voto {
     @Column(nullable = false)
     private String cpf;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "pauta_id", nullable = false)
+    @ManyToOne
     private Pauta pauta;
 
     @ManyToOne
+    @JoinColumn(name = "associado_id", nullable = false)
     private Associado associado;
 }

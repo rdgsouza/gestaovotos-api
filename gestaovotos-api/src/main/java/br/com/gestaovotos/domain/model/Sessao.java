@@ -25,5 +25,6 @@ public class Sessao {
     private LocalDateTime dataInicio;
 
     @ManyToOne
+    @JoinColumn(name = "pauta_id", nullable = false)
     private Pauta pauta;
 }
