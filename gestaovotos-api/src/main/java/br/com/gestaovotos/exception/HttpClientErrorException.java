@@ -1,9 +1,9 @@
 package br.com.gestaovotos.exception;
 
-public class CpfInvalidoException extends NegocioException {
+public class HttpClientErrorException extends RuntimeException {
     private static final long serialVersionUID = 1L;
 
-    public CpfInvalidoException(String mensagem) {
+    public HttpClientErrorException(String mensagem) {
         super(mensagem);
     }
 }

@@ -2,6 +2,7 @@ package br.com.gestaovotos.api.exceptionhandler;
 
 import br.com.gestaovotos.exception.EntidadeEmUsoException;
 import br.com.gestaovotos.exception.EntidadeNaoEncontradaException;
+import br.com.gestaovotos.exception.HttpClientErrorException;
 import br.com.gestaovotos.exception.NegocioException;
 import com.fasterxml.jackson.databind.JsonMappingException.Reference;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
@@ -245,6 +246,20 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 
 		HttpStatus status = HttpStatus.BAD_REQUEST;
 		ProblemType problemType = ProblemType.ERRO_NEGOCIO;
+		String detail = ex.getMessage();
+
+		Problem problem = createProblemBuilder(status, problemType, detail)
+				.userMessage(detail)
+				.build();
+
+		return handleExceptionInternal(ex, problem, new HttpHeaders(), status, request);
+	}
+
+	@ExceptionHandler(HttpClientErrorException.class)
+	public ResponseEntity<?> handleNegocio(HttpClientErrorException ex, WebRequest request) {
+
+		HttpStatus status = HttpStatus.BAD_REQUEST;
+		ProblemType problemType = ProblemType.MSG_ERROR_CLIENT;
 		String detail = ex.getMessage();
 
 		Problem problem = createProblemBuilder(status, problemType, detail)
