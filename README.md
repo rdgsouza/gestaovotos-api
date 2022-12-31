@@ -1,4 +1,4 @@
- # Projeto desenvolvido para realização de desafio Técnico
+ # Projeto desenvolvido para realização de desafio técnico
    
    Objetivo do desafio: 
 
