@@ -75,13 +75,6 @@ não infrinja direitos de uso).
    Configurei o nginx para receber as requisões pela porta 80 ou seja caso queira testar o projeto localmente pelo Docker, utilize a URI dessa forma Ex:
    <h4> localhost:80/v1/pautas/1 </h4>
    <br>
-
-   Caso queira testar o projeto que estar rodando no Docker na nuvem, utilize a URI dessa forma. Ex: Faça uma requisição usando o método http GET de pautas por ID dessa forma: <br>
-   Adicione IP address da aplição na nuvem: 20.195.202.49 seguido da porta 80 do balanceador de carga nginx ficando assim:
-   
-   <h4> 20.195.202.49:80/v1/pautas/1 </h4>
-   
-   Obs: Lembrando que inicialmente o banco de dados está sem dados para fazer testes. É preciso inicialmente fazer um requisição usando o método POST na URI da aplicação para popular o banco de dados.
    
    <br>
    Sobre a documentação da API:
